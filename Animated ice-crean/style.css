@@ -1,0 +1,97 @@
+body {
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    background-color: #2A2E46;
+}
+
+
+
+.stick {
+    width: 40px;
+    height: 240px;
+    position: relative;
+    background-color: bisque;
+    border-radius: 20px;
+}
+
+.stick:before {
+    content: "";
+    background-color: pink;
+    width: 160px;
+    height: 300px;
+    position: absolute;
+    border-radius: 96px 96px 32px 32px;
+    bottom: 35%;
+    right: -60px;
+}
+
+.stick::after {
+    content: "";
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 65%;
+}
+
+
+.drop-falling {
+    background-color: pink;
+    width: 16px;
+    height: 60px;
+    position: absolute;
+    border-radius: 50px;
+    top: 50%;
+    left: 156%;
+
+}
+
+.drop-falling:before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    background-color: pink;
+    border-radius: 50%;
+    animation: anima 1s normal infinite;
+}
+
+.drop {
+    width: 40px;
+    height: 15px;
+    position: absolute;
+    background-color: pink;
+    border-radius: 100px / 50px;
+    left: 128%;
+    top: 98%;
+
+    animation: anima-drop 1s normal infinite;
+    animation-delay: 2s;
+}
+
+@keyframes anima {
+    from {
+        bottom: 70%;
+    }
+
+    to {
+        bottom: -75px;
+    }
+}
+
+@keyframes anima-drop {
+    from {
+        width: 40px;
+        height: 21px;
+        border-right-width: 55px;
+    }
+
+    to {
+        width: 45px;
+        height: 21px;
+    }
+}
+
