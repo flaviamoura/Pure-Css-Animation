@@ -1,25 +1,32 @@
+:root {
+    --background-color: #2A2E46;
+    --stick-color: bisque;
+    --ice-cream-color:  #DEA4CA;
+    --stripe-color: #DA81B1;
+    --stick-shadow-color:  rgba(0, 0, 0, 0.2);
+    --name-color: #ffffff;
+}
+
 body {
     overflow: hidden;
     justify-content: center;
     align-items: center;
     height: 100vh;
     display: flex;
-    background-color: #2A2E46;
+    background-color: var(--background-color);
 }
-
-
 
 .stick {
     width: 40px;
     height: 240px;
     position: relative;
-    background-color: bisque;
+    background-color: var(--stick-color);
     border-radius: 20px;
 }
 
 .stick:before {
     content: "";
-    background-color: pink;
+    background-color: var(--ice-cream-color);
     width: 160px;
     height: 300px;
     position: absolute;
@@ -33,13 +40,32 @@ body {
     width: 40px;
     height: 20px;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--stick-shadow-color);
     top: 65%;
 }
 
+.stripe {
+    background-color: var(--stripe-color);
+    width: 34px;
+    height: 220px;
+    border-radius: 40px 40px 20px 20px;
+    position: absolute;
+    right: 34px;
+    top:-90px;
+}
+
+.stripe-2 {
+    background-color: var(--stripe-color);
+    width: 34px;
+    height: 220px;
+    border-radius: 40px 40px 20px 20px;
+    position: absolute;
+    left: 34px;
+    top:-90px;
+}
 
 .drop-falling {
-    background-color: pink;
+    background-color: var(--ice-cream-color);
     width: 16px;
     height: 60px;
     position: absolute;
@@ -54,7 +80,7 @@ body {
     width: 14px;
     height: 14px;
     position: absolute;
-    background-color: pink;
+    background-color:  var(--ice-cream-color);
     border-radius: 50%;
     animation: anima 1s normal infinite;
 }
@@ -63,7 +89,7 @@ body {
     width: 40px;
     height: 15px;
     position: absolute;
-    background-color: pink;
+    background-color:  var(--ice-cream-color);
     border-radius: 100px / 50px;
     left: 128%;
     top: 98%;
@@ -95,3 +121,11 @@ body {
     }
 }
 
+footer{
+    color:  var(--name-color);
+    margin-top: 30rem;
+    position: absolute;
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 9px;
+}
